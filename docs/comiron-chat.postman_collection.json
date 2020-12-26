@@ -1,0 +1,355 @@
+{
+  "info": {
+    "name": "comiron-chat",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "/api/users/auth/save-phone",
+      "request": {
+        "auth": {
+          "type": "bearer"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"phone\": \"+71234556789\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3310/api/users/auth/save-phone",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3310",
+          "path": [
+            "api",
+            "users",
+            "auth",
+            "save-phone"
+          ]
+        },
+        "description": "saving phone"
+      },
+      "response": []
+    },
+    {
+      "name": "/api/users/auth/is-verified",
+      "request": {
+        "auth": {
+          "type": "bearer"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"phone\": \"+71234556789\" }"
+        },
+        "url": {
+          "raw": "http://localhost:3310/api/users/auth/is-verified",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3310",
+          "path": [
+            "api",
+            "users",
+            "auth",
+            "is-verified"
+          ]
+        },
+        "description": "verify phone"
+      },
+      "response": {
+        "isVerified": true,
+        "jwtToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJiYTIyMDg5YjE0OGZmZWY0NTM5YWUiLCJwaG9uZSI6IjcxMjM0NTU2Nzg5IiwiaWF0IjoxNTk2Nzk3MjU5fQ.exPkED9NEbudkI-tc9Slow3lhDw5jYFqbg8P3gLMsLc"
+      }
+    },
+    {
+      "name": "/api/users/contacts",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI5N2MzYjEzNTIyOTM0OTA1YzZmY2EiLCJwaG9uZSI6IjcxMjM0NTU2Nzg5IiwiaWF0IjoxNTk2Njk4MTc3fQ.ClM1wz7vm60djJNq1HcfTeFhq1atkKPeAjxATV74QoQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI5N2MzYjEzNTIyOTM0OTA1YzZmY2EiLCJwaG9uZSI6IjcxMjM0NTU2Nzg5IiwiaWF0IjoxNTk2Njk4MTc3fQ.ClM1wz7vm60djJNq1HcfTeFhq1atkKPeAjxATV74QoQ",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contacts\": [\r\n    {\r\n      \"phoneNumbers\": [\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"type\": \"2\",\r\n          \"id\": \"1\",\r\n          \"isPrimary\": 0,\r\n          \"number\": \"+7 708 106 8805\"\r\n        },\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"type\": \"2\",\r\n          \"id\": \"237\",\r\n          \"isPrimary\": 0,\r\n          \"number\": \"+7 777 037 4878\"\r\n        }\r\n      ],\r\n      \"lookupKey\": \"1654r1-269CE67854AC.2792r9-269CE67854AC\",\r\n      \"firstName\": \"TEST\",\r\n      \"contactType\": \"person\",\r\n      \"name\": \"TEST_NAME\",\r\n      \"id\": \"1\",\r\n      \"imageAvailable\": false\r\n    },\r\n    {\r\n      \"phoneNumbers\": [\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"type\": \"2\",\r\n          \"id\": \"7\",\r\n          \"isPrimary\": 0,\r\n          \"number\": \"+77081067804\"\r\n        }\r\n      ],\r\n      \"lookupKey\": \"3789r2-260678A28A78\",\r\n      \"firstName\": \"TEST_1\",\r\n      \"contactType\": \"person\",\r\n      \"name\": \"TEST_NAME_1\",\r\n      \"id\": \"75\",\r\n      \"imageAvailable\": false\r\n    },\r\n    {\r\n      \"phoneNumbers\": [\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"type\": \"2\",\r\n          \"id\": \"8\",\r\n          \"isPrimary\": 0,\r\n          \"number\": \"+7 707 733 1533\"\r\n        },\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"type\": \"2\",\r\n          \"id\": \"15\",\r\n          \"isPrimary\": 0,\r\n          \"number\": \"+77077331533\"\r\n        }\r\n      ],\r\n      \"lookupKey\": \"1654r3-261A8AC8AC9606A22862280316.3789r4-261A8AC8AC9606A22862280316\",\r\n      \"firstName\": \"TEST_2\",\r\n      \"contactType\": \"person\",\r\n      \"name\": \"TEST_NAME_2\",\r\n      \"id\": \"3\",\r\n      \"imageAvailable\": false,\r\n      \"lastName\": \"Теле2\",\r\n      \"urlAddresses\": [\r\n        {\r\n          \"label\": \"other\",\r\n          \"type\": \"7\",\r\n          \"url\": \"http://like.beeline.kz\",\r\n          \"id\": \"157\",\r\n          \"isPrimary\": 0\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"phoneNumbers\": [\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"type\": \"2\",\r\n          \"id\": \"16\",\r\n          \"isPrimary\": 0,\r\n          \"number\": \"+7 778 933 1724\"\r\n        },\r\n        {\r\n          \"label\": \"mobile\",\r\n          \"type\": \"2\",\r\n          \"id\": \"22\",\r\n          \"isPrimary\": 0,\r\n          \"number\": \"+77789330724\"\r\n        }\r\n      ],\r\n      \"lookupKey\": \"1654r5-260E660E0640062A4A067C72400672.3789r6-260E660E0640062A4A067C72400672.2792r23-260E660E0640062A4A067C72400672\",\r\n      \"firstName\": \"TEST_3\",\r\n      \"contactType\": \"person\",\r\n      \"name\": \"TEST_NAME_3\",\r\n      \"id\": \"5\",\r\n      \"imageAvailable\": false,\r\n      \"lastName\": \"TEST_LAST_NAME_3\"\r\n    }\r\n  ]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3310/api/users/contacts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3310",
+          "path": [
+            "api",
+            "users",
+            "contacts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/users/messages/:chatId&limit=&skip=",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI5N2MzYjEzNTIyOTM0OTA1YzZmY2EiLCJwaG9uZSI6IjcxMjM0NTU2Nzg5IiwiaWF0IjoxNTk2Njk4MTc3fQ.ClM1wz7vm60djJNq1HcfTeFhq1atkKPeAjxATV74QoQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3310/api/users/messages/5f2bbec72ccea5067040268c?limit=3&skip=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3310",
+          "path": [
+            "api",
+            "users",
+            "messages",
+            "5f2bbec72ccea5067040268c"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "3"
+            },
+            {
+              "key": "skip",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "content": {
+            "message": "some text"
+          },
+          "_id": "5f2bd540842e1430f08cf87c",
+          "chat": "5f2bbec72ccea5067040268c",
+          "sender": "71234556789",
+          "createdAt": "2020-08-06T10:02:40.431Z",
+          "updatedAt": "2020-08-06T10:02:40.431Z",
+          "__v": 0
+        }
+      ]
+    },
+    {
+      "name": "/api/users/pushtokens",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJiYTIyMDg5YjE0OGZmZWY0NTM5YWUiLCJwaG9uZSI6IjcxMjM0NTU2Nzg5IiwiaWF0IjoxNTk2Nzc1MTI2fQ.AfBv7K955CjseTlAxelHeY7xli_OuRFFvjgrCzN5Gfc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"token\": \"expo push token\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3310/api/users/pushtokens",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3310",
+          "path": [
+            "api",
+            "users",
+            "pushtokens"
+          ]
+        },
+        "description": "saving the expo push token"
+      },
+      "response": []
+    },
+    {
+      "name": "/api/users/pushtokens",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJiYTIyMDg5YjE0OGZmZWY0NTM5YWUiLCJwaG9uZSI6IjcxMjM0NTU2Nzg5IiwiaWF0IjoxNTk2Nzc1MTI2fQ.AfBv7K955CjseTlAxelHeY7xli_OuRFFvjgrCzN5Gfc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"token\": \"expo push token\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3310/api/users/pushtokens",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3310",
+          "path": [
+            "api",
+            "users",
+            "pushtokens"
+          ]
+        },
+        "description": "delete the expo push token"
+      },
+      "response": []
+    },
+    {
+      "name": "/api/users/contacts",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJiYTIyMDg5YjE0OGZmZWY0NTM5YWUiLCJwaG9uZSI6IjcxMjM0NTU2Nzg5IiwiaWF0IjoxNTk2Nzk3MjU5fQ.exPkED9NEbudkI-tc9Slow3lhDw5jYFqbg8P3gLMsLc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3310/api/users/contacts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3310",
+          "path": [
+            "api",
+            "users",
+            "contacts"
+          ]
+        },
+        "description": "get user's contacts"
+      },
+      "response": [
+        {
+          "_id": "5f2d316f7051b3340436c8ae",
+          "user": "5f2ba22089b148ffef4539ae",
+          "id": "1",
+          "name": "TEST_NAME",
+          "phoneNumbers": [
+            {
+              "_id": "5f2d316f7051b3340436c8af",
+              "number": "77081068805",
+              "phoneExists": true
+            },
+            {
+              "_id": "5f2d316f7051b3340436c8b0",
+              "number": "77770374878",
+              "phoneExists": false
+            }
+          ],
+          "userExists": true,
+          "createdAt": "2020-08-07T10:48:15.670Z",
+          "updatedAt": "2020-08-07T10:48:15.670Z",
+          "__v": 0
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjI5N2I3NGVlNzA0MTI0YTQzODU3NDAiLCJwaG9uZSI6IjcxMjM0NTU2Nzg5IiwiaWF0IjoxNTk2NTU0MTAwfQ.k_8KhN8X6MuyxWEmXz_-QqGQ_kVeKJGuHaiNYgMClAE",
+        "type": "string"
+      }
+    ]
+  },
+  "protocolProfileBehavior": {}
+}

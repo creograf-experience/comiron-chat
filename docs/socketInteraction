@@ -1,0 +1,34 @@
+event: init user
+{
+    "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjJiYTIyMDg5YjE0OGZmZWY0NTM5YWUiLCJwaG9uZSI6IjcxMjM0NTU2Nzg5IiwiaWF0IjoxNTk2Nzk3MjU5fQ.exPkED9NEbudkI-tc9Slow3lhDw5jYFqbg8P3gLMsLc"
+}
+
+event: create chat
+{
+  "receiver": {
+    "contactName": "71234556789",
+    "phone": "71234556789"
+  },
+  "content": {
+    "message": "hello muchacho",
+    "attachment": null
+  }
+}
+
+event: create message
+{
+    "chatId": chat _id,
+    "sender": sender user _id,
+    "content": {
+      "message": "Hello World",
+      "attachment": null,
+      "uuid": null
+    }
+  }
+}
+
+event: delete message
+{
+    "chatId": chat _id,
+    "_id": _id or uuid of the message
+}
